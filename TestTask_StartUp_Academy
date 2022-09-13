@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class TestTask {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner (System.in);
+		Scanner scanner1 = new Scanner (System.in);
+		float currentBitcoinPrice = 21000f; // We can do simplest way, without this (8) string -> then 13 str will be written "}while (value!=21000);" . BUT we need to referent to BTC exchange rate. 
+		float value; 
+		do {
+			System.out.println("Enter a current Bitcoin`s price");
+			value = scanner.nextFloat();
+		}while (value!=currentBitcoinPrice);
+		
+		System.out.println("How many $ u wanna exchange?");
+		float USD = scanner1.nextFloat();
+		float exchange = USD/value; 
+		System.out.println(exchange);
+		}
+	}
